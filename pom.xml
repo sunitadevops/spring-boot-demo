@@ -37,9 +37,8 @@
         </dependency>
         <dependency>
             <groupId>org.junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
+            <artifactId>junit4-runner</artifactId>
+            <version>5.0.0-ALPHA</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
