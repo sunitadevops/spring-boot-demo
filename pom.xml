@@ -121,7 +121,7 @@
                 <version>2.5.2</version>
                 <configuration>
                     <to>
-                        <image>docker.io/ashokshingade24/${project.artifactId}</image>
+                        <image>docker.io/sunita95/${project.artifactId}</image>
                         <tags>
                             <tag>${project.version}</tag>
                             <tag>latest</tag>
