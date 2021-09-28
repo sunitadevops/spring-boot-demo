@@ -41,18 +41,3 @@ spec:
   type: NodePort
 status:
   loadBalancer: {}
----
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: spring-boot-demo
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: \"false\"
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /spring-boot-demo
-        backend:
-          serviceName: spring-boot-demo
-          servicePort: 8080
