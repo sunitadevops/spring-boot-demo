@@ -55,10 +55,10 @@ pipeline {
     stage('Deploy to K8s') {
       steps {
         script {
-        kubernetesDeploy(configs: "k8s.yml", kubeconfigId: "kubernetes-config")
-        {
-        sh 'kubectl create -f $WORKSPACE/spring-boot-demo-pipeline/k8s.yml'
-        }
+        //kubernetesDeploy(configs: "k8s.yml", kubeconfigId: "kubernetes-config")
+        //{
+          sh 'kubectl --kubeconfig=$JENKINS_HOME/kubeconfig create -f $WORKSPACE/k8s.yml'
+       // }
        }
       } 
     }
