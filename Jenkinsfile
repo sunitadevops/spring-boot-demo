@@ -57,7 +57,7 @@ pipeline {
         script {
         kubernetesDeploy(configs: "k8s.yaml", kubeconfigId: "kubernetes-config")
         {
-        sh 'kubectl create -f $WORKSPACE/k8s.yml'
+        sh 'kubectl create -f $WORKSPACE/spring-boot-demo-pipeline/k8s.yml'
         }
        }
       } 
