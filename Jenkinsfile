@@ -54,9 +54,12 @@ pipeline {
 
     stage('Deploy to K8s') {
       steps {
-        kubernetesDeploy(kubeconfigId: 'kubernetes-config',
-          configs: '**/*.yaml',
-        )
+        script {
+        kubernetesDeploy(configs: "k8s.yaml", kubeconfigId: "kubernetes-config")
+        {
+        sh 'kubectl create -f $WORKSPACE/k8s.yml'
+        }
+       }
       } 
     }
   }
